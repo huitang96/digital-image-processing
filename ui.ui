@@ -10,8 +10,15 @@
     <height>738</height>
    </rect>
   </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::CustomContextMenu</enum>
+  </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string> </string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(238, 255, 247);
+background-color: rgb(255, 253, 243);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="verticalLayoutWidget">
@@ -154,14 +161,28 @@
             <widget class="QWidget" name="widget_5" native="true">
              <layout class="QVBoxLayout" name="verticalLayout_3" stretch="9,1">
               <item>
-               <widget class="QWidget" name="widget_7" native="true"/>
+               <widget class="QWidget" name="widget_7" native="true">
+                <widget class="QLabel" name="label_6">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>10</y>
+                   <width>441</width>
+                   <height>491</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </widget>
               </item>
               <item>
                <widget class="QWidget" name="widget_8" native="true">
                 <widget class="QSlider" name="horizontalSlider">
                  <property name="geometry">
                   <rect>
-                   <x>120</x>
+                   <x>80</x>
                    <y>20</y>
                    <width>160</width>
                    <height>22</height>
@@ -174,7 +195,7 @@
                 <widget class="QLabel" name="label_2">
                  <property name="geometry">
                   <rect>
-                   <x>50</x>
+                   <x>20</x>
                    <y>20</y>
                    <width>53</width>
                    <height>16</height>
