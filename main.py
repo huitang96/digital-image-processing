@@ -7,7 +7,8 @@ from PyQt6.QtWidgets import QMainWindow
 from pathChoose import open_file_dialog
 from imageShow import image_show
 from DIP.ImageBinarization import image_binarization
-
+from DIP.EdgeDetection import edge_detection_sobel
+from DIP.ImageSharpen import sharpen_filter
 
 Ui_MainWindow, _ = loadUiType('./ui.ui')
 
@@ -16,9 +17,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         super().__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        self.ui.pushButton_10.clicked.connect(self.on_button_10_clicked)
-        self.ui.pushButton.clicked.connect(self.on_button_clicked)
-        self.ui.horizontalSlider.valueChanged.connect(self.on_slider_value_changed)
+        self.ui.pushButton_10.clicked.connect(self.on_button_10_clicked) # 加载图片
+        self.ui.pushButton.clicked.connect(self.on_button_clicked) # 二值化
+        self.ui.pushButton_2.clicked.connect(self.on_button_2_clicked) # 边缘检测
+        self.ui.pushButton_3.clicked.connect(self.on_button_3_clicked) # 图像锐化
+
+        self.ui.horizontalSlider.valueChanged.connect(self.on_slider_value_changed) # 滑动条
         self.threshold = 127
         self.mode = None
         #设置软件背景图
@@ -41,6 +45,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.threshold = self.ui.horizontalSlider.value()
             self.threshold = int(self.threshold*2.55)
             print("阈值", self.threshold)
+        elif self.mode == "边缘检测":
+            pass
         elif self.mode == "图像锐化":
             pass
     def on_button_clicked(self):
@@ -52,9 +58,18 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         image_show(binary_pixmap, self.ui.label_5)
     def on_button_2_clicked(self):
         # 图像锐化
+        self.mode = "边缘检测"
+        if self.ui.label_5.pixmap():
+            self.ui.label_5.clear()
+        edge_pixmap = edge_detection_sobel(self.pixmap)
+        image_show(edge_pixmap, self.ui.label_5)
+    def on_button_3_clicked(self):
+        # 图像锐化
         self.mode = "图像锐化"
         if self.ui.label_5.pixmap():
             self.ui.label_5.clear()
+        sharpen_pixmap = sharpen_filter(self.pixmap)
+        image_show(sharpen_pixmap, self.ui.label_5)
 
 
 

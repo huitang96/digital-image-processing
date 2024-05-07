@@ -4,6 +4,9 @@ def sobel_filter(image):
     width, height = image.width(), image.height()
     sobel_x = [[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]]
     sobel_y = [[-1, -2, -1], [0, 0, 0], [1, 2, 1]]
+    # canny 算子
+    # canny_x = [[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]]
+    # canny_y = [[-1, -2, -1], [0, 0, 0], [1, 2, 1]]
     output_image = QImage(width, height, QImage.Format.Format_RGB32)
     for x in range(1, width - 1):
         for y in range(1, height - 1):
@@ -15,6 +18,7 @@ def sobel_filter(image):
                     gx += gray * sobel_x[i][j]
                     gy += gray * sobel_y[i][j]
             gradient_magnitude = qAbs(gx) + qAbs(gy)
+            gradient_magnitude = int(gradient_magnitude)
             output_image.setPixel(x, y, qRgb(gradient_magnitude, gradient_magnitude, gradient_magnitude))
     return output_image
 def edge_detection_sobel(input_pixmap):
@@ -26,3 +30,6 @@ def edge_detection_sobel(input_pixmap):
     # 将边缘强度图转换回 QPixmap
     output_pixmap = QPixmap.fromImage(edge_image)
     return output_pixmap
+
+# 写一个图像锐化的函数
+

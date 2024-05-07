@@ -14,7 +14,7 @@
    <enum>Qt::CustomContextMenu</enum>
   </property>
   <property name="windowTitle">
-   <string> </string>
+   <string/>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(238, 255, 247);
@@ -81,16 +81,23 @@ background-color: rgb(255, 253, 243);</string>
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_3">
+            <widget class="QPushButton" name="pushButton_2">
              <property name="text">
-              <string>图像旋转</string>
+              <string>边缘检测</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_2">
+            <widget class="QPushButton" name="pushButton_3">
              <property name="text">
               <string>图像锐化</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_6">
+             <property name="text">
+              <string>图像旋转</string>
              </property>
             </widget>
            </item>
@@ -105,13 +112,6 @@ background-color: rgb(255, 253, 243);</string>
             <widget class="QPushButton" name="pushButton_5">
              <property name="text">
               <string>图像滤波</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton_6">
-             <property name="text">
-              <string>边缘检测</string>
              </property>
             </widget>
            </item>
