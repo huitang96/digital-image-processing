@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6eb4e74a-a2d2-4246-9f97-c8c112be8603" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/thkits.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DIP/ImageBinarization.py" beforeDir="false" afterPath="$PROJECT_DIR$/DIP/ImageBinarization.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DIP/ImageSharpen.py" beforeDir="false" afterPath="$PROJECT_DIR$/DIP/ImageSharpen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
