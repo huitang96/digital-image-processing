@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6eb4e74a-a2d2-4246-9f97-c8c112be8603" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/DIP/ImageSharpen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thkits.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DIP/EdgeDetection.py" beforeDir="false" afterPath="$PROJECT_DIR$/DIP/EdgeDetection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DIP/ImageBinarization.py" beforeDir="false" afterPath="$PROJECT_DIR$/DIP/ImageBinarization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DIP/ImageSharpen.py" beforeDir="false" afterPath="$PROJECT_DIR$/DIP/ImageSharpen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +51,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.ImageSharpen.executor": "Run",
     "Python.main.executor": "Debug",
     "Python.pathChoose.executor": "Debug",
+    "Python.thkits.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "D:/projects/AI/P1_DIP"
@@ -105,11 +106,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DIP/ImageBinarization.py</url>
-          <line>33</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
           <line>71</line>
           <option name="timeStamp" value="23" />
@@ -121,7 +117,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DIP/ImageSharpen.py</url>
-          <line>45</line>
+          <line>43</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">

@@ -71,8 +71,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         sharpen_pixmap = sharpen_filter(self.pixmap)
         image_show(sharpen_pixmap, self.ui.label_5)
 
-
-
 if __name__ == '__main__':
     app = QApplication(sys.argv)  # 创建应用程序实例
     window = MainWindow()  # 创建窗口实例

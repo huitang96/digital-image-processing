@@ -23,19 +23,3 @@ def image_binarization(pixmap, threshold):
     binary_pixmap = QPixmap.fromImage(image)
     return binary_pixmap
 
-import numpy as np
-
-# def image_binarization(pixmap, threshold):
-#     # 将 QPixmap 转换为 QImage
-#     image = pixmap.toImage()
-#     # 将图像转换为灰度格式
-#     image = image.convertToFormat(QImage.Format.Format_Grayscale8)
-#     # 将 QImage 转换为 NumPy 数组
-#     image_array = np.array(image.constBits()).reshape(image.height(), image.width())
-#     # 使用阈值进行二值化处理
-#     binary_array = (image_array > threshold).astype(np.uint8) * 255
-#     # 将二值化后的 NumPy 数组转换回 QImage
-#     binary_image = QImage(binary_array.data, image.width(), image.height(), QImage.Format_Grayscale8)
-#     # 将二值化的 QImage 转换回 QPixmap
-#     binary_pixmap = QPixmap.fromImage(binary_image)
-#     return binary_pixmap
