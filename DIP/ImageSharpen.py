@@ -1,18 +1,4 @@
 
-import cv2
-import matplotlib.pyplot as plt
-import numpy as np
-def image_show(path):
-    # 显示图片
-    # path = "./lena.png"
-    img = cv2.imread(path, cv2.IMREAD_COLOR)
-    plt.imshow(img)
-    plt.show()
-def img_show_int(img):
-    # 此时img为ndarray格式
-    plt.imshow(img)
-    plt.title('img')
-    plt.show()
 def grad_img(img):
     # img为ndarray格式
     # 求取一张图片的梯度
@@ -28,7 +14,7 @@ def grad_img(img):
             for y in range(img_y - 1):
                 gx = abs(img_f[x, y, c] - img_f[x + 1, y, c])  # 水平方向的梯度
                 gy = abs(img_f[x, y, c] - img_f[x, y + 1, c])  # 垂直方向的梯度
-                grad_f[x, y, c] = gx + gy  # 某像素点的梯度
+                grad_f[x, y, c] = gx + gy  # 某像素点的梯度,这里可以通过乘以一个系数进行调整锐度
     img_f = img_f.astype('uint8')
     grad_f = grad_f.astype('uint8')
     return img_f, grad_f
@@ -37,12 +23,22 @@ def sharp_img(img):
     sharp_img = grad_f + img_f
     return sharp_img
 
+
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+from THKits import numpy_to_qimage,qimg_to_numpy,img_show_int
 if __name__ == '__main__':
     # 加载显示
-    path = "./lena.png"
+    path = "../image/lena.png"
     img = cv2.imread(path, cv2.IMREAD_COLOR)
-    img_show_int(img) # 原图显示
+    # img_show_int(img) # 原图显示
     sharp_img = sharp_img(img)
-    img_show_int(sharp_img) # 锐化图片显示
+    # img_show_int(sharp_img) # 锐化图片显示
+    qimg = numpy_to_qimage(sharp_img)
+    # pixmap = qimg_to_pixmap(qimg)
+    npimg = qimg_to_numpy(qimg)
+    img_show_int(npimg)
+    # print(pixmap)
 
 

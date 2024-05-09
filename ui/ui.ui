@@ -242,7 +242,7 @@ background-color: rgb(255, 253, 243);</string>
                   </rect>
                  </property>
                  <property name="text">
-                  <string>方法简介</string>
+                  <string>aiYOUNG</string>
                  </property>
                 </widget>
                 <widget class="QLabel" name="label_4">
@@ -255,7 +255,7 @@ background-color: rgb(255, 253, 243);</string>
                   </rect>
                  </property>
                  <property name="text">
-                  <string>该方法通过设置阈值，设置为0或1</string>
+                  <string/>
                  </property>
                 </widget>
                </widget>

@@ -31,5 +31,4 @@ def edge_detection_sobel(input_pixmap):
     output_pixmap = QPixmap.fromImage(edge_image)
     return output_pixmap
 
-# 写一个图像锐化的函数
 

@@ -4,13 +4,13 @@ from PyQt6.QtGui import QPixmap
 from PyQt6.QtWidgets import QApplication
 from PyQt6.uic import loadUiType
 from PyQt6.QtWidgets import QMainWindow
-from pathChoose import open_file_dialog
-from imageShow import image_show
+from THKits import pixmap_show, open_file_dialog
 from DIP.ImageBinarization import image_binarization
 from DIP.EdgeDetection import edge_detection_sobel
-from DIP.ImageSharpen import sharpen_filter
+from DIP.ImageSharpen import grad_img
+from THKits import pixmap_to_qimg, qimg_to_numpy, numpy_to_qimage, qimg_to_pixmap
 
-Ui_MainWindow, _ = loadUiType('./ui.ui')
+Ui_MainWindow, _ = loadUiType('./ui/ui.ui')
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -26,8 +26,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.threshold = 127
         self.mode = None
         #设置软件背景图
-        self.ui.label_5.setStyleSheet("border-image: url(./img/background.jpg);")
-        self.ui.label_6.setStyleSheet("border-image: url(./img/background.jpg);")
+        # self.ui.label_5.setStyleSheet("border-image: url(./image/background.jpg);")
+        self.ui.centralwidget.setStyleSheet("border-image: url(./image/background.jpg);")
 
     def on_button_10_clicked(self):
         # 加载图片
@@ -36,7 +36,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             if self.file_path:
                 if os.path.isfile(self.file_path) and os.path.splitext(self.file_path)[1].lower() in ['.png', '.jpg', '.jpeg','.bmp']:
                     self.pixmap = QPixmap(self.file_path)
-                    image_show(self.pixmap, self.ui.label_6)
+                    pixmap_show(self.pixmap, self.ui.label_6)
         except Exception as e:
             print(f"Error occurred while opening file dialog: {e}")
     def on_slider_value_changed(self):
@@ -55,21 +55,27 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if self.ui.label_5.pixmap():
             self.ui.label_5.clear()
         binary_pixmap = image_binarization(self.pixmap, self.threshold)
-        image_show(binary_pixmap, self.ui.label_5)
+        pixmap_show(binary_pixmap, self.ui.label_5)
     def on_button_2_clicked(self):
         # 图像锐化
         self.mode = "边缘检测"
         if self.ui.label_5.pixmap():
             self.ui.label_5.clear()
         edge_pixmap = edge_detection_sobel(self.pixmap)
-        image_show(edge_pixmap, self.ui.label_5)
+        pixmap_show(edge_pixmap, self.ui.label_5)
     def on_button_3_clicked(self):
+
         # 图像锐化
         self.mode = "图像锐化"
         if self.ui.label_5.pixmap():
             self.ui.label_5.clear()
-        sharpen_pixmap = sharpen_filter(self.pixmap)
-        image_show(sharpen_pixmap, self.ui.label_5)
+        qimg = pixmap_to_qimg(self.pixmap) # pixmap -> qimg
+        npimg = qimg_to_numpy(qimg) # qimg -> npimg
+        img_f, grad_f = grad_img(npimg) # 求图像梯度
+        sharpen_npimg = img_f + grad_f # 计算锐化
+        qimg_f = numpy_to_qimage(sharpen_npimg) # npimg -> qimg
+        pixmap_f = qimg_to_pixmap(qimg_f) # qimg - >pixmap
+        pixmap_show(pixmap_f, self.ui.label_5)
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)  # 创建应用程序实例

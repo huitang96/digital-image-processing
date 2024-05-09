@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6eb4e74a-a2d2-4246-9f97-c8c112be8603" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/image/ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DIP/EdgeDetection.py" beforeDir="false" afterPath="$PROJECT_DIR$/DIP/EdgeDetection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DIP/ImageSharpen.py" beforeDir="false" afterPath="$PROJECT_DIR$/DIP/ImageSharpen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/image/background.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imageShow.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lena.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/lena.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pathChoose.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/thkits.py" beforeDir="false" afterPath="$PROJECT_DIR$/THKits.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/ui.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +58,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.ImageSharpen.executor": "Run",
-    "Python.main.executor": "Debug",
+    "Python.THKits.executor": "Run",
+    "Python.main.executor": "Run",
     "Python.pathChoose.executor": "Debug",
     "Python.thkits.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -57,6 +67,12 @@
     "last_opened_file_path": "D:/projects/AI/P1_DIP"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\AI\P1_DIP\ui" />
+      <recent name="D:\projects\AI\P1_DIP\image" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="P1_DIP" />
@@ -104,28 +120,28 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>71</line>
+          <line>77</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>70</line>
-          <option name="timeStamp" value="28" />
+          <url>file://$PROJECT_DIR$/DIP/ImageSharpen.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DIP/ImageSharpen.py</url>
-          <line>43</line>
-          <option name="timeStamp" value="36" />
+          <line>39</line>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DIP/ImageSharpen.py</url>
-          <line>20</line>
-          <option name="timeStamp" value="37" />
+          <line>38</line>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DIP/ImageSharpen.py</url>
-          <line>19</line>
-          <option name="timeStamp" value="38" />
+          <url>file://$PROJECT_DIR$/THKits.py</url>
+          <line>95</line>
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
